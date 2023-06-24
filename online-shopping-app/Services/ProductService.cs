@@ -28,27 +28,22 @@ namespace online_shopping_app.Services
             }
             
         }
-
         public List<Product> GetAllProducts()
         {
             return _products.Find(product => true ).ToList();
         }
-        
         public Product GetProductById(string id)
         {
             return _products.Find(product => product.ProductId == id).FirstOrDefault();
         }
-
         public List<Product> GetProductsByKeyword(string keyword)
         {
             return _products.Find(products => products.ProductName.ToLower().Contains(keyword.ToLower())).ToList();
         }
-
         public void RemoveProduct(string productName, string id)
         {
             _products.DeleteOne(product => product.ProductName == productName && product.ProductId == id);
         }
-
         public void UpdateProduct(string productName, string id, Product product)
         {
             if(product.QuantityAvaiable > 0)
