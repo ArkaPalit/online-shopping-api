@@ -7,6 +7,7 @@
     <RootNamespace>online_shopping_app</RootNamespace>
     <UserSecretsId>d33e2064-ca6e-41d7-a354-f29f7e2519ba</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
